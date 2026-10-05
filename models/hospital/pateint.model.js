@@ -9,6 +9,11 @@ const patientSchema = new mongoose.Schema({
     contactNumber: {
         type: Number,
         require: true,
-
+    },
+    email: {
+        type: String,
+        lowercase: true,
     }
 }, { timestamps: true })
+
+export const patient = mongoose.model("patient", patientSchema)
